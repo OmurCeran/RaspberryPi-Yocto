@@ -1,0 +1,20 @@
+diff --git a/../bcm2837-rpi-3-b-plus.dts.orig b/bcm2837-rpi-3-b-plus.dts
+index 2f1800c..27f775d 100644
+--- a/../bcm2837-rpi-3-b-plus.dts.orig
++++ b/bcm2837-rpi-3-b-plus.dts
+@@ -161,3 +161,15 @@
+ &wifi_pwrseq {
+ 	reset-gpios = <&expgpio 1 GPIO_ACTIVE_LOW>;
+ };
++
++&i2c1 {
++	pinctrl-name = "default";
++	pinctrl-0 = <&i2c1_gpio2>;
++	status = "okay";
++};
++
++&spi {
++	pinctrl-name = "default";
++	pinctrl-0 = <&spi1_gpio16>;
++	status = "okay";
++};
