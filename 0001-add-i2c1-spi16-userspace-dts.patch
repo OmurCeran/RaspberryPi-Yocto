@@ -1,4 +1,5 @@
 diff --git a/../bcm2837-rpi-3-b-plus.dts.orig b/bcm2837-rpi-3-b-plus.dts
+Upstream-Status: Pending
 index 2f1800c..27f775d 100644
 --- a/arch/arm/boot/dts/broadcom/bcm2837-rpi-3-b-plus.dts
 +++ b/arch/arm/boot/dts/broadcom/bcm2837-rpi-3-b-plus.dts
