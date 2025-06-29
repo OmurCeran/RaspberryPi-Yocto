@@ -1,7 +1,7 @@
 diff --git a/bcm2837-rpi-3-b.dts.orig b/bcm2837-rpi-3-b.dts
 Upstream-Status: Pending
 index 6127034..b645251 100644
---- a/arc/arm/boot/dts/broadcom/bcm2837-rpi-3-b.dts
+--- a/arch/arm/boot/dts/broadcom/bcm2837-rpi-3-b.dts
 +++ b/arch/arm/boot/dts/broadcom/bcm2837-rpi-3-b.dts
 @@ -152,3 +152,15 @@
  &wifi_pwrseq {
