@@ -1,0 +1,38 @@
+/home/omurceran/Desktop/poky/build/tmp/work-shared/raspberrypi3/kernel-source/arch/arm/boot/dts - dts locations
+
+bzcat tmp/deploy/images/raspberrypi3/core-image-base-raspberrypi3.rootfs.wic.bz2 | sudo dd of=/dev/sdb
+
+sudo bmaptool copy custom-image-raspberrypi3.rootfs-20250626124435.tar.bz2 --bmap custom-image-raspberrypi3.rootfs-20250626124435.wic.bmap /dev/sdb
+
+sudo screen /dev/ttyUSB0 115200
+
+7e804000 -- address
+ls -l /sys/bus/i2c/devices/ ------i2c device check
+
+ls -l /dev/i2c*
+
+ls -l /sys/bus/spi/devices/ ------spi device check
+
+
+/home/omurceran/Desktop/poky/meta-custom/recipes-kernel/linux/files
+
+/home/omurceran/Desktop/poky/build/tmp/work-shared/raspberrypi3/kernel-source/arch/arm/boot/dts/broadcom
+
+bitbake -c menuconfig busybox
+ThyssssenMMA-3
+
+sudo bmaptool copy tmp/deploy/images/raspberrypi3-64/custom-image-omur-raspberrypi3-64.rootfs-20250902205531.wic.bz2 /dev/sdb
+
+systemctl status -- checking system status
+
+ctrl_interface=/var/run/wpa_supplicant
+update_config=1
+country=TR
+
+network={
+        ssid=""
+        psk=""
+
+}
+
+sudo wpa_cli status -- wifi status
