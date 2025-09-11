@@ -19,7 +19,6 @@ ls -l /sys/bus/spi/devices/ ------spi device check
 /home/omurceran/Desktop/poky/build/tmp/work-shared/raspberrypi3/kernel-source/arch/arm/boot/dts/broadcom
 
 bitbake -c menuconfig busybox
-ThyssssenMMA-3
 
 sudo bmaptool copy tmp/deploy/images/raspberrypi3-64/custom-image-omur-raspberrypi3-64.rootfs-20250902205531.wic.bz2 /dev/sdb
 
