@@ -1,0 +1,21 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "raspberrypi,3-model-b", "brcm,bcm2837";
+
+    fragment@0 {
+        target = <&i2c1>; // RPi3'te i2c1 genellikle aktif
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+
+            bmp280@76 {
+                compatible = "bosch,bmp280";
+                reg = <0x76>;
+                status = "okay";
+            };
+        };
+    };
+};
+
