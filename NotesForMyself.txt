@@ -13,12 +13,12 @@ ls -l /dev/i2c*
 
 ls -l /sys/bus/spi/devices/ ------spi device check
 
-
 /home/omurceran/Desktop/poky/meta-custom/recipes-kernel/linux/files
 
 /home/omurceran/Desktop/poky/build/tmp/work-shared/raspberrypi3/kernel-source/arch/arm/boot/dts/broadcom
 
 bitbake -c menuconfig busybox
+ThyssssenMMA-3
 
 sudo bmaptool copy tmp/deploy/images/raspberrypi3-64/custom-image-omur-raspberrypi3-64.rootfs-20250902205531.wic.bz2 /dev/sdb
 
@@ -35,3 +35,41 @@ network={
 }
 
 sudo wpa_cli status -- wifi status
+
+ssh root@192.168.0.104
+
+ip addr show -- ip address
+
+i2c enable comment:
+sudo modprobe i2c-dev
+sudo modprobe i2c-bcm2835
+
+i2cdetect -y 1
+we should see address table.
+
+dmesg = log check command -- i2c_dev: i2c /dev entries driver
+
+ssh-keygen -f '/home/omurceran/.ssh/known_hosts' -R '192.168.0.114'
+
+${D} = /home/omurceran/Desktop/poky-rpi/build/tmp/work/raspberrypi3_64-poky-linux/linux-raspberrypi/6.6.63+git/image
+
+${WORKDIR} = /home/omurceran/Desktop/poky-rpi/build/tmp/work/raspberrypi3_64-poky-linux/linux-raspberrypi/6.6.63+git
+
+${B} = /home/omurceran/Desktop/poky-rpi/build/tmp/work/raspberrypi3_64-poky-linux/linux-raspberrypi/6.6.63+git/build
+
+${B} = B="/home/omurceran/Desktop/poky-rpi/build/tmp/work/raspberrypi3_64-poky-linux/linux-raspberrypi/6.6.63+git/linux-raspberrypi3_64-standard-build"
+
+${S} = S="/home/omurceran/Desktop/poky-rpi/build/tmp/work-shared/raspberrypi3-64/kernel-source"
+
+DEPLOYDIR = "/home/omurceran/Desktop/poky-rpi/build/tmp/work/raspberrypi3_64-poky-linux/linux-raspberrypi/6.6.63+git/deploy-linux-raspberrypi"
+
+bitbake -e linux-raspberrypi | grep ^DEPLOYDIR=
+
+
+/home/omurceran/Desktop/poky-rpi/build/tmp/work/raspberrypi3_64-poky-linux/linux-raspberrypi/6.6.63+git/temp -- logs
+
+/home/omurceran/Desktop/poky-rpi/build/tmp/work/raspberrypi3_64-poky-linux/linux-raspberrypi/6.6.63+git/linux-raspberrypi3_64-standard-build/arch/arm64/boot/dts/overlays
+
+bitbake custom-image-omur -c populate_sdk
+
+gcc test_u8g23.c -I/usr/include/u8g2 -I/usr/include/linux
