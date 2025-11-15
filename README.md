@@ -58,7 +58,7 @@ meta-custom/
 Ömür Ceran - [LinkedIn](https://linkedin.com/in/omur-ceran/)
 ```
 
-#### file tree
+#### File tree
 ```
 meta-custom/
 ├── README.md
@@ -75,3 +75,4 @@ meta-custom/
 └── recipes-core/
     └── images/
         └── custom-image-omur.bb
+```
