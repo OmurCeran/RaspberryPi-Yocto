@@ -40,13 +40,8 @@ meta-custom/
 │   └── images/
 │       └── custom-image-omur.bb
 ├── recipes-devtools/
-│   └── python/
-│       └── python3-luma-oled_%.bbappend
-└── recipes-apps/
-    └── oled-demo/
-        ├── oled-demo_1.0.bb
-        └── files/
-            └── oled_demo.py
+    └── python/
+        └── python3-luma-oled_%.bbappend
 ```
 
 ## Build Instructions
